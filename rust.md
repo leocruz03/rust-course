@@ -51,6 +51,58 @@ para un Python
 ```
     // crear nuevo proyecto con cargo
 
-    cargo new hello_cargo
+    cargo new name_project
+
+    // crear una nueva librería
+
+    cargo new name_library --lib
+
+    // crear ejecutable
+
+    cargo build
+
+    // el compilador va a agregar optimizaciones sobre el programa
+
+    cargo build --release 
+
+    /*
+        * Hace que sea menos pesado y más rápido a la hora de ejecutarse
+    */
+
+    // compilar y ejecutar el proyecto de una vez
+
+    cargo run
+
+    // sirve para ver si el proyecto compila correctamente
+
+    cargo check
 ```
-Ese es el comando para crear una aplicación en Rust
+
+# ***Crates.io***
+En este sitio se encuentran los paquetes que se pueden usar en la aplicaciones
+de Rust, donde se pueden encontrar bastante paquetes para diferentes tipos de 
+desarrollo
+
+[crates.io](https://crates.io/)
+
+## ***¿Cómo agregar un nuevo paquete o dependencia al proyecto?***
+Esto se puede hacer de dos forma tanto copiando y pegando el nombre del paquete con su versión en el archivo ***Cargo.toml*** o por medio de la línea de comandos.
+
+- ### ***En el archivo Cargo.toml***
+    Hay una sección que dice ***[dependencies]*** y de bajo se pone el nobre y la versión del paquete, y queda listo para usar
+
+    ```
+        [dependencies]
+        syn = "1.0.109"
+        ... otros más
+    ```
+- ### ***Por línea de comandos***
+    ```
+        // para agregar una dependencia
+
+        cargo add name_dependency
+
+        // para agregar una feature de una dependencia en concreto
+
+        cargo add name_dependency --features derive
+    ```
