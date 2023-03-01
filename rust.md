@@ -29,4 +29,28 @@ Soporta multiples paradigmas
     de tipo equivocado
 
 - Seguridad de memoria: 
-    Todas las referencias siempre apuntarán a memoria valida
+    Todas las referencias siempre apuntarán a memoria válida
+
+- Sin condiciones de carrera: 
+    Sistema ownership de Rust nos garantiza que multiples partes del programa
+    no puedan modificar el valor al mismo tiempo.
+
+- Abstracciones a consto cero: 
+    Rust nos permite usar conceptos de alto nivel (interfaces, iteraciones, 
+    enums, programación funcional...) conun alto costo nulo o mínimo en 
+    performance.
+
+- Runtime mínimo: 
+    Rust tiene un runtime mínimo y lo más optimizado posible, similar a C o 
+    C++.
+
+# ***Cargo***
+Cargo es el gestor de paquetes en Rust, com un NPM lo es para JS, o un PIP 
+para un Python
+
+```
+    // crear nuevo proyecto con cargo
+
+    cargo new hello_cargo
+```
+Ese es el comando para crear una aplicación en Rust
