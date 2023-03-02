@@ -1,3 +1,5 @@
+use std::ops::RangeTo;
+
 fn main() {
     
     // Flujos de control
@@ -17,6 +19,52 @@ fn main() {
         println!("'u can enter")
     } else {
         println!("was a older for enter")
+    }
+
+    // forma corta de las condicionales
+    let num = 5;
+
+    let resultant = if num >= 5 { 1000 } else { 0 };
+
+    println!("resultado: {}", resultant);
+
+    // --------------------------------------------------------------------------------------------------------- //
+
+    // loop
+    
+    /* 
+        con loop se puede ejecutar infinitamente un código hasta que uno lo detenga
+    */
+
+    let mut counter = 0;
+
+    loop {
+        counter += 1;
+
+        println!("loop");
+        if counter == 5 {
+            println!("El contador llego hasta: {}", counter);
+            break;
+        }
+    }
+
+    // while
+
+    /*
+        este es un bucle el cual solo parará de ejecutarse hasta que se cumpla la condición definida
+    */
+
+    while counter > 0 {
+        counter -= 1;
+        println!("counter: {}", counter);
+    }
+
+    // for
+
+    let arr = [1, 2, 3, 4, 5];
+
+    for i in arr.iter() {
+        println!("i: {}", i);
     }
 
 }
