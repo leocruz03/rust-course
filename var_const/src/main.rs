@@ -67,6 +67,10 @@ fn main() {
     println!("Imprimendo una constante global con valor de: {}", GLOBAL_CONST);
 
     /*
+        static define una posición fija en memoria que puede actuar como una variable global
+    */
+
+    /*
         Mostrar variables o concatenar y mostrar en consola
 
         se utiliza {}, para concatenar variables a strings y mostrarlos en consola
