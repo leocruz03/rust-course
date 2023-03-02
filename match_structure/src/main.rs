@@ -21,4 +21,19 @@ fn main() {
         2 => println!("Es dos"),
         _ => println!("Es algún otro número"),
     }
+
+    let first_colour = (200, 0, 0);
+    let second_colour = (50, 50, 50);
+    match_colours(first_colour);
+    match_colours(second_colour);
+}
+
+// esta función recibe una tupla como parámetro
+fn match_colours(rgb: (i32, i32, i32)) {
+    match rgb {
+        (r, _, _) if r < 10 => println!("No muy rojo"),
+        (_, g, _) if g < 10 => println!("No muy verde"),
+        (_, _, b) if b < 10 => println!("No muy azul"),
+        _ => println!("Cada color tiene al menos 10")
+    }
 }
