@@ -48,4 +48,35 @@ fn main() {
         tiene más costos de memoria y también al momento de recuperar datos, etsa memoria heap es libe-
         rada cuando no tiene más dueños
     */
+
+    let name = String::from("Leonardo"); // solo existe desde el entorno main
+    println!("{name}");
+    presentation();
+
+    // ejemplo de prestamo en memoria Stack
+
+    /* 
+        con el "&", hacemos referencia a lo que estamos pasando y después se desreferencia
+    */
+    let mut age = 20;
+    increase_age(&mut   age);
+    println!("{}", age);
+
+    // ejemplo de prestamo en memoria heap
+    let mut name = String::from("John");
+    send_name(&mut name);
+    println!("{}", name);
+}
+
+fn presentation() {
+    // en este entorno la variable name no existe
+}
+
+fn increase_age(age: &mut i32) {
+    *age += 1;
+}
+
+fn send_name(name: &mut String) {
+    name.push_str("-2023-03-04");
+    println!("send name: {}, to server", name)
 }
