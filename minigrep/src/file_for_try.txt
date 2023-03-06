@@ -1,0 +1,20 @@
+A method without root, that works even with new Android versions:
+
+Prerequisites:
+
+Linux, Windows or Mac
+USB cable for your device
+Android Device
+Instructions:
+
+Install your device driver for using adb. Everything you need will you find here
+Download adb executable for your OS. It is part of the Android SDK, but you might be able to find the adb executable individually.
+Connect your android device.
+Enable the developer options.
+Enable USB debugging.
+Open a command promt (windows) or terminal (linux / mac). How to do it: On Windows: windows + r > enter "cmd" (without quotes) > click enter | On Linux: You don't know how to open a terminal? LOL | On Mac: Type Terminal into Spotlight and open it
+CD to the directory where the adb executable is located. On Windows: Go to the directory where you downloaded the adb executable, Shift+Right Click and select "Open Console" (or similar) | On Linux / Mac: Rightclick in the directory and select "Open Terminal here" (or simply CD into the directory)
+Type in your cmd/terminal: adb devices to verify your device is properly connected.
+If your device is properly selected, type in adb logcat to show the mighty and magic logcat aka stacktrace.
+Reproduce your error (or whatever) on your device.
+Right after, paste the whole cmd / terminal window into a paste-service like http://pastebin.com/ and send it to us.
